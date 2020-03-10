@@ -1,0 +1,23 @@
+/*
+Note:
+This is just to demo how I would start styling components.
+Obviously it would have been more consistent to use material ui styles instead.
+*/
+$footer-border: #DCDCDC;
+$footer-text: #9A9A9A;
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+  border-top: 1px solid $footer-border;
+}
+
+.footer__text {
+  color: $footer-text;
+  text-align: center;
+  font-size: 0.875rem;
+  line-height: 1.43;
+  letter-spacing: 0.01em;
+}

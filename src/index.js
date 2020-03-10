@@ -1,12 +1,32 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import CssBaseline from '@material-ui/core/CssBaseline'
+import Header from './components/Header'
+import Footer from './components/Footer'
+import MemoryTest from './components/MemoryTest'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+/*
+* Note:
+* The app is styled using a material design component framework.
+* I thought this was a nice way to create a nice looking app without spending too much time.
+* On real apps, I enjoy writing my own component driven styles with SCSS drawing on ideas from SMACSS, ITCSS, BEM & Atomic CSS.
+*/
+const App = () => {
+  return (
+    <div>
+      <Header/>
+      <MemoryTest/>
+      <Footer/>
+    </div>
+  )
+}
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+// ========================================
+
+ReactDOM.render(
+  <React.StrictMode>
+    <CssBaseline/>
+    <App/>
+  </React.StrictMode>,
+  document.getElementById('root')
+);
